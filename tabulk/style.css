@@ -1,0 +1,77 @@
+body {
+margin: 0;
+padding: 50px 20px;
+background-color: hotpink;
+font-family: "Segoe UI", Arial, sans-serif;
+color: #111827;
+}
+
+.table-box {
+max-width: 900px;
+margin: 0 auto;
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.user-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.user-table th {
+background-color: #111827;
+color: white;
+font-size: 13px;
+font-weight: 700;
+text-align: left;
+padding: 18px 24px;
+}
+
+.user-table td {
+padding: 16px 24px;
+border-bottom: 1px solid #e5e7eb;
+font-size: 15px;
+}
+
+.user-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.user {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.avatar {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+
+p {
+margin: 0;
+}
+
+.user-email,
+.department {
+color: #6b7280;
+font-size: 14px;
+font-weight: 700;
+}
+
+.status {
+background-color: #059669;
+color: white;
+font-size: 13px;
+font-weight: 700;
+padding: 3px 9px;
+border-radius: 20px;
+align-self: baseline;
+}
+
+.edit {
+color: #6d28d9;
+text-decoration: none;
+}

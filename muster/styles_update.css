@@ -1,0 +1,258 @@
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+    color: #222;
+}
+
+nav{
+     width: 100%;
+    flex-basis: 100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:#fff;
+    color:#0e608f;
+    
+   
+
+}
+nav a{
+text-decoration:none;
+    color: #0e608f;
+}
+.logo{
+font-size:22px;
+font-weight:bold;
+    color:#0e608f;
+}
+.menu{
+display:flex;
+gap:25px;
+    color:#0e608f;
+}
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+#menu-toggle{
+display:none;
+}
+
+.container{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+    max-width: 1200px;
+    margin: 50px auto;
+   
+}
+
+
+/* SPOLOČNÉ NASTAVENIE HLAVNÝCH BOXOV */
+
+.box1,
+.box2,
+.box3,
+.box4{
+    background-color: white;
+
+    flex-basis: 45%;
+    min-height: 380px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+
+/* TEXTOVÉ BOXY */
+
+.box1,
+.box4{
+    padding: 30px;
+    flex-direction: column;
+}
+
+
+/* OBRÁZKOVÉ BOXY */
+
+.box2,
+.box3{
+    padding: 15px;
+}
+
+
+/* OBRÁZKY */
+
+.obrazok{
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 14px;
+}
+
+
+/* TLAČIDLO */
+
+.button {
+    background-color: #222;
+    border: none;
+    color: white;
+
+    padding: 14px 24px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+
+/* TEXT */
+
+h1{
+    font-size: clamp(30px, 3vw, 46px);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.6;
+    text-align: left;
+    color: #555;
+}
+
+
+/* GALÉRIA */
+
+.galeria {
+    flex-basis: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding-top: 40px;
+    text-align: center;
+}
+
+.galeria-box {
+    display: flex;
+    justify-content: center;
+    
+    gap: 15px;
+}
+
+.foto {
+    flex: 1;
+    padding: 15px;
+    
+    background-color: white;
+
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.foto p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+/* RESPONZIVITA */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .box1{
+        flex-basis: 100%;
+        width: 100%;
+        min-height: auto;
+        order: 1;
+    }
+
+    .box2{
+        flex-basis: 100%;
+        width: 100%;
+        min-height: auto;
+        order: 2;
+    }
+
+    .box3{
+        flex-basis: 100%;
+        width: 100%;
+        min-height: auto;
+        order: 4;
+    }
+
+    .box4{
+        flex-basis: 100%;
+        width: 100%;
+        min-height: auto;
+        order: 3;
+    }
+
+    .galeria{
+        order: 5;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .galeria-box {
+        flex-direction: column;
+    }
+    
+   
+nav{
+flex-wrap:wrap;
+}
+.hamburger{
+display:block;
+}
+.menu{
+display:none;
+flex-direction:column;
+width:100%;
+text-align:center;
+padding-top:15px;
+}
+#menu-toggle:checked +
+.hamburger + .menu{
+display:flex;
+}
+}
+
+
+  

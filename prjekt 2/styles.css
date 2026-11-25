@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo vľavo, menu vpravo */
+  align-items: center;            /* Zarovná všetko zvislo na stred */
+  background-color: #333;         /* Tmavé pozadie */
+  padding: 13px 20px;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* Štýl pre odkazové menu */
+.nav-links {
+  list-style: none; /* Odstráni bodky zo zoznamu */
+  display: flex;    /* Dá položky Domov, O nás... VEDĽA SEBA */
+  gap: 20px;        /* Medzera medzi jednotlivými odkazmi */
+}
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Odstráni podčiarknutie textu */
+  font-size: 16px;
+  transition: 0.3s;
+}
+/* Efekt pri prejdení myšou */
+.nav-links a:hover {
+  color: #ffd700; /* Zmení farbu na žltú/zlatú */
+}
+body{
+    background-color: mintcream
+}
+.foto1 img{
+    width: 170px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.foto2 img{
+    width: 170px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.foto3 img{
+    width: 170px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.row1{
+    outline: dotted;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 3px;
+}
+.row2{
+    outline:dashed ;
+    display: flex;
+    gap: 18px;
+}

@@ -1,0 +1,43 @@
+ .container{
+margin: 40px auto;
+border:solid 2px #F00;
+max-width: 1000px;
+height:auto;
+padding:30px;
+
+display: flex;
+flex-wrap:wrap;
+gap: 15px;
+}
+
+.box1{
+background-color: yellow;
+}
+
+.box2{
+background-color: green;
+}
+
+.box3{
+background-color: blue;
+}
+
+.box4{
+background-color: red;
+}
+
+.box1,
+.box2,
+.box3,
+.box4{
+
+flex-basis: 25 px;
+min-height: 300px;
+
+}
+
+@media(max-width:800px){
+.container {
+flex-wrap:neviem;
+}
+}

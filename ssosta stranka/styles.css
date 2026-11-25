@@ -1,0 +1,416 @@
+
+/* ===== ZAKLADNE NASTAVENIA ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* sekcia sa po kliknuti v menu neschova pod lepiacu hlavicku */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #032b54;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+img{
+    max-height: 20rem;
+    max-width: 25rem;
+}
+
+.obal {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== TLACIDLA ===== */
+.btn-tmavy {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 50px;
+    background-color: #032b54;
+    color: white;
+    border: 2px solid #032b54;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-tmavy:hover {
+    background-color: #fcbd30;
+    color: white;
+    border: 2px solid #fcbd30;
+}
+
+.btn-maly {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #032b54;
+    color: white;
+    border: 2px solid #032b54;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 8px 20px;
+}
+.btn-maly:hover{
+    background-color: #fcbd30;
+    color: white;
+    border: 2px solid #fcbd30;
+}
+
+.btn-svetly {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 50px;
+    border: 2px solid #032b54;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background-color: white;
+    color: #032b54;
+    border-color: #032b54
+}
+
+.btn-svetly:hover {
+    background-color: #FFFFFF;
+    color: #fcbd30;
+}
+
+.tlacidla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+/* ===== HLAVICKA ===== */
+.hlavicka {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #EEE;
+}
+
+.logo {
+    align-items: baseline;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #032b54;
+    text-decoration: none;
+}
+.logo img{
+    height: 30px;
+    width: 100px;
+}
+
+.hlavicka nav {
+    display: flex;
+    gap: 28px;
+}
+
+.hlavicka nav a {
+    color: #032b54;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hlavicka nav a:hover {
+    color: #fcbd30;
+}
+
+/* ===== UVOD ===== */
+.uvod {
+    background-color: #fff7e6;
+    margin: 0;
+    padding: 70px 20px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.uvod-text {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.nadnadpis {
+    color: #032b54;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.uvod h1 {
+    font-size: 3rem;
+    margin-bottom: 18px;
+}
+
+.uvod h1 span {
+    color: #fcbd30;
+}
+
+.uvod-text > p:not(.nadnadpis) {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+.uvod-foto {
+    padding: 1rem;
+    align-items: center;
+    flex: 1;
+    max-width: 30rem;
+}
+
+.uvod-foto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+    background-color: #E6F4F2;
+    display: block;
+}
+
+/* ===== SEKCIE  ===== */
+.sekcia {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.odbory {
+    background-color: #fff7e6;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.dva-stlpce {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.dva-stlpce p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.zoznam-odborov {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.odbor {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.odbor:hover {
+    transform: translateY(-4px);/*ai*/
+}
+
+.ikona {
+    font-size: 2rem;
+}
+
+.odbor h3 {
+    margin: 12px 0 8px;
+}
+
+.odbor p {
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.odkaz {
+    color: #032b54;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.zoznam-vyhod { /*ai*/
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.zoznam-vyhod li {
+    padding: 20px 24px;
+    border-left: 4px solid #fcdb30;
+    background-color: #fff7e6;
+    border-radius: 0 12px 12px 0;
+    color: #555;
+}
+
+.zoznam-vyhod strong {
+    display: block;
+    color: #032b54;
+    margin-bottom: 4px;
+}
+/* ===== GALERIA =====  */
+.galeria-mriezka { /*ai*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-bottom: 2rem;
+}
+
+.galeria-mriezka img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+/* ===== KONTAKT ===== */
+.kontakt {
+    background-color: #032b54;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.kontakt h2 {
+    margin-bottom: 10px;
+}
+
+.kontakt p {
+    margin-bottom: 28px;
+    opacity: 0.9;
+}
+
+.kontakt .tlacidla {
+    justify-content: center;
+}
+
+/* ===== PATA STRANKY ===== */
+.pata {
+    background-color: #222831;
+    color: #B8BEC6;
+    padding: 50px 20px 20px;
+}
+
+.pata-obsah {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.pata .logo {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.pata h4 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.pata a {
+    color: #B8BEC6;
+    text-decoration: none;
+}
+
+.pata a:hover {
+    color: white;
+}
+
+.meno {
+    text-align: center;
+    font-size: 0.85rem;
+    border-top: 1px solid #3A414B;
+    padding-top: 20px;
+}
+/* ===== MOBIL ===== robene z ai */
+@media (max-width: 768px) {
+    section[id] {
+        scroll-margin-top: 130px;
+    }
+
+    .hlavicka {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 20px;
+    }
+
+    .hlavicka nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .uvod {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .uvod h1 {
+        font-size: 2.2rem;
+    }
+
+    .uvod-text > p:not(.nadnadpis) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .uvod .tlacidla {
+        justify-content: center;
+    }
+
+    .uvod-foto {
+        width: 100%;
+    }
+
+    .uvod-foto img {
+        height: 250px;
+    }
+    .galeria-mriezka {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galeria-mriezka img {
+        height: 150px;
+    }
+    .dva-stlpce,
+    .zoznam-odborov,
+    .zoznam-vyhod,
+    .pata-obsah {
+        grid-template-columns: 1fr;
+    }
+
+    .sekcia {
+        padding: 60px 20px;
+    }
+}
